@@ -50,4 +50,42 @@ totalteacher_sameofficebuilding	        office_address
 4                                       Via Mariano 48
 
 3. Calcolare la media dei voti di ogni appello d'esame
+
+SELECT AVG(`vote`) AS `average_vote`, `exam_id`
+FROM `exam_student`
+GROUP BY `exam_id`
+
+
+average_vote	exam_id
+16.8824	            1
+16.4615	            2
+20.3333	            3     
+27.0000	            4
+17.5000	            6
+19.6000	            7
+6.5000	            8
+12.0000	            9
+17.4324	            11
+14.8889	            12
+22.0000	            13
+18.0526	            16
+19.0000	            17
+5.5000	            18
+22.0000	            19
+16.6176	            21
+15.0000	            22
+12.7500	            23
+12.0000	            24
+3.0000	            25
+19.1667	            26
+24.5000	            27
+16.9583	            31
+17.2500	            32
+20.1818	            36
+ecc
 4. Contare quanti corsi di laurea ci sono per ogni dipartimento
+
+SELECT COUNT(*) AS `course_count`, `degree_id`
+FROM `courses`
+GROUP BY `degree_id`
+
