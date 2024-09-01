@@ -85,7 +85,7 @@ average_vote	exam_id
 ecc
 4. Contare quanti corsi di laurea ci sono per ogni dipartimento
 
-SELECT COUNT(*) AS `course_count`, `degree_id`
-FROM `courses`
-GROUP BY `degree_id`
+SELECT COUNT(*) AS `number_of_degrees`,`department_id`
+FROM degrees
+GROUP BY department_id;
 
