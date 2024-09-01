@@ -87,5 +87,5 @@ ecc
 
 SELECT COUNT(*) AS `number_of_degrees`,`department_id`
 FROM degrees
-GROUP BY department_id;
+GROUP BY `department_id`;
 
