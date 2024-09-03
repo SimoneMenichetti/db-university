@@ -83,7 +83,7 @@ Matematica (54)
 
 [ 6*
 
-SELECT `teachers`.`name`AS `teacher_name`,`teachers`.`surname`AS`teacher_surname`,`departments`.`name` AS `department_name`
+SELECT DISC `teachers`.`name`AS `teacher_name`,`teachers`.`surname`AS`teacher_surname`,`departments`.`name` AS `department_name`
 FROM `teachers`
 INNER JOIN `course_teacher`
 ON `teachers`.`id`= `course_teacher`.`teacher_id`
@@ -93,6 +93,7 @@ INNER JOIN `degrees`
 ON `courses`.`degree_id` = `degrees`.`department_id`
 INNER JOIN `departments`
 ON `departments`.`id` = `departments`.`id`
+WHERE `departments`.`name`= "dipartimento di matematica"
 ORDER BY `teachers`.`surname`ASC,`teachers`.`name`ASC,`departments`.`name`ASC
 
 ]
